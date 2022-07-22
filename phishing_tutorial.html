@@ -60,8 +60,21 @@
 	}
 	
 	
-	</style>
 	
+	.sampleimage{
+	width: 80%;
+	height: auto;
+	margin-right: 50px;
+}
+	
+	
+	</style>
+	<link rel="stylesheet" href="css/zoomio.css" />
+	<script src="js/zoomio.js">
+
+<script src="js/jquery.min.js"></script>
+
+
 
 </head>
 
@@ -374,7 +387,7 @@
 				
 				
 				
-				<div id="content-wrapper" style="background:transparent">
+				<div id="content-wrapper" style="background:transparent; min-height:1620px; " >
 
 <div class="col-lg-12">
 			<div class="row">
@@ -401,13 +414,22 @@
 			
 			<div class="panel panel-default panelTot content"  style="padding-bottom:15px;">
     	<div class="panel-body">
-		  <div class="col-md-12">
+		<div class="row" >
+		
+		<div class="col-md-2"></div>
+			
+		  <div class="col-md-8">
 		<h2>	 In 3 easy-steps learn to detect and stop email phishing. <h2>
 
 <p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">This tutorial explains how to detect emails containing ransomware, viruses and other malware, in three easy steps. </p>
 		</div>
-		
-    		        <div class="col-md-8">
+				<div class="col-md-2"></div>
+				</div>
+				
+				
+		<div class="row" style="margin-bottom:25px;">
+		<div class="col-md-2"></div>
+    		        <div class="col-md-4">
 				
 
 <p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
@@ -417,12 +439,88 @@
             
         </div>
 		
-		<div class="col-md-4" style="text-align:center; padding-bottom:35px;">
-		<img src="img/step1.jpg"  width="45%"  />
+		<div class="col-md-4" style="text-align:center; padding-bottom:35px; ">
+		<img class="sampleimage" src="img/step1-1.jpg" data-largesrc="img/step1-1.jpg" /> 
+		
+           <div class="hover1">Hover to Zoom Image</div> 
+        </div>
+		
+		<div class="col-md-2"></div>
+		
+		</div>
+		
+	<div class="row" style="margin-bottom:25px;">
+		<div class="col-md-2"></div>
+    		        <div class="col-md-4">
+				
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
+<strong>Step 2: </strong> Sender’s email address   If the email Subject or body seems suspicious then, next thing is to look at the Sender’s email address.   Click on the Sender’s emails once or on some devices, twice and a pop-up will show the details of the sender’s email. Invariably, the email address will not have domain name that reflects the email’s subject or message. <br/> <strong>NOTE: </strong>No legit email will have unrecognizable domain.  </p>
+
+					
             
         </div>
 		
-		<div class="col-md-8">
+		<div class="col-md-4" style="text-align:center; padding-bottom:35px;">
+		<img class="sampleimage" src="img/step2-2.jpg" data-largesrc="img/step2-2.jpg" /> 
+		
+           <div class="hover1">Hover to Zoom Image</div> 
+        </div>
+		
+		<div class="col-md-2"></div>
+		
+		</div>
+		
+		
+		
+		<div class="row">
+		<div class="col-md-2"></div>
+    		        <div class="col-md-4">
+				
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
+<strong>Step 3: </strong>  Attachments or URL links in the email body Another common characteristic of malicious emails is either having an attachment (pdf, word or other common formats) OR a URL Link that the email prods you to click. <br/> <strong>NOTE: </strong> Unless you initiated or requested something back, no legit company will send you an email with an attachment or URL Link for you to click. Do not click the URL link or attachment in such emails. If you accidently do, close browser and delete any downloaded files from your device.  </p>
+
+					
+            
+        </div>
+		
+		<div class="col-md-4" style="text-align:center; padding-bottom:35px;">
+		<img class="sampleimage" src="img/step3-1.jpg" data-largesrc="img/step3-1.jpg" /> 
+		
+           <div class="hover1">Hover to Zoom Image</div> 
+        </div>
+		
+		<div class="col-md-2"></div>
+		
+		</div>
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<!---	<div class="col-md-8">
 				
 
 <p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
@@ -452,15 +550,13 @@
 		<div class="col-md-4" style="text-align:center;">
 		<img src="img/step3.jpg"  width="45%"  />
             
-        </div>
+        </div>--->
 		
 		
 		
     	</div>
 		
-		<div class="row" id="buttons" style="opacity: 1;">
-            
-      </div>
+		
 		
     </div>
 			
@@ -888,6 +984,17 @@ var showLoadingDots = function() {
 	}
 
 	</script>
+
+	<script>
+
+jQuery(function($){ // on DOM load
+	$('.sampleimage').zoomio({
+		fadeduration: 500
+	})
+})
+
+</script>
+	
 <style>
 
 .center-brand-logo {
