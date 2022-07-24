@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="google-site-verification" content="UUjLmm5RDhmuCWAKv4jIGeMQvwuttg4-X_lHjDObOJo" />	
+	<title>WhiteHax Lite</title>
+
+	
+	
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	
+	<!-- RTL support - for demo only -->
+	<script src="js/demo-rtl.js"></script>
+	
+	<!-- libraries -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- global styles -->
+	<link rel="stylesheet" type="text/css" href="css/theme_styles.css" />
+	<link rel="stylesheet" href="css/morris.css" type="text/css" />
+
+	
+	<!-- this page specific styles -->
+	<link rel="stylesheet" href="css/daterangepicker.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery-jvectormap-1.2.2.css" type="text/css" />
+	<link rel="stylesheet" href="css/weather-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/select2.css" type="text/css" />
+	
+	<!-- Favicon -->
+	<link type="image/x-icon" href="/static/whlite/img/favicon.ico" rel="shortcut icon" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.nanoscroller.min.js"></script>
+	
+	<style>
+.blue_black {
+   
+    border: 1px solid #1AA0D3;
+    color: #64B5F6;
+    padding: 15px;
+}
+.p_s td{padding:10px;  text-align:center; }
+
+.borderright{border-right:1px solid #ccc;}
+.borderbottom{border-bottom:1px solid #ccc;}
+
+.p_s {width:80%; margin: 0px auto;}
+	
+	@media (min-width: 768px){
+	.modal-dialog {
+    width: 600px;
+    margin: 170px auto;
+}
+	}
+	
+	
+	
+	.sampleimage{
+	width: 95%;
+	height: auto;
+	margin-right: 50px;
+}
+	
+	
+	</style>
+	<link rel="stylesheet" href="css/zoomio.css" />
+	<script src="js/zoomio.js">
+
+<script src="js/jquery.min.js"></script>
+
+
+
+</head>
+
+
+<body class="pace-done theme-whbl" >
+
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+     
+      <div class="modal-content" style="text-align:center;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body" style="display:flex;">
+         <div class="col-lg-12 blue_black">
+							
+	 <table class="p_s">
+	 <tr><td colspan="2" style="text-align:center; color:#64B5F6; font-size:17px;" class="borderbottom" ><strong>Phishing Simulation</strong></td> </tr>
+	  <tr><td class="borderbottom borderright"><img src="img/social.png"  /><div> Social Networking</div></td> 
+		  <td  class="borderbottom"><img src="img/ship.png"  /><div> Shipment/Products</div></td></tr>
+		  
+		   <tr><td class="borderbottom borderright"><img src="img/bn.png"  /><div> Banking/Government</div></td> 
+		  <td class="borderbottom"><img src="img/at.png"  /><div> Accounts/Passwords</div></td></tr>
+		  
+		  
+		   <tr><td colspan="2"><img src="img/cn.png"  /><div> Contests/Lottery</div></td> 
+		 </tr>
+		  
+
+		 
+	  
+	 
+	 </table>
+	 
+	 
+  
+
+   
+  
+						</div>
+						
+						
+						
+						<!---    <div class="col-lg-12 blue_black">
+							<table>
+							<tr><td colspan="2" ><strong>Select the device you would like to test <strong> </td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>9b3046aa</td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>Amit's Iphone</td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>Android Bluedroid</td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>Anis Mansuri's Iphone</td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>Asus Z01RD</td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>iPhone</td></tr>
+							<tr><td><input type="checkbox" id="uid" name="uid" value="uid"></td>  <td>Moto G5 Plus </td></tr>
+							
+							</table>
+   
+  
+						</div>--->
+						
+						
+		 
+		 
+		 
+        </div>
+        <div class="modal-footer">
+		 
+ 
+      
+		</div>
+      </div>
+      
+    </div>
+  </div>
+	<div id="theme-wrapper">
+		<header class="navbar" id="header-navbar" style="height:80px">
+			<div class="container">
+				<a href="/whlite/main.html" id="logo" class="navbar-brand">
+<!--					<img src="/static/whlite/img/logo1.png" alt="" class="normal-logo logo-white"/>-->
+<!--					<img src="/static/whlite/img/None" alt="" class="normal-logo logo-white"/>-->
+					<label style="font-size:40px;color: #fff;margin-top: 20px;">White</label><label style="font-size:40px;color: #ff0000;margin-top: 6px;">HaX</label>
+				</a>
+				<div class="clearfix">
+				<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button" >
+					<span class="sr-only" >Toggle navigation</span>
+					<span class="fa fa-bars"></span>
+				</button>
+
+				<a href="/whlite/main.html" id="logo" class="center-brand-logo" >
+										<img src="/static/whlite/img/None" alt="" class="normal-logo logo-white" style="height:55px" />
+				</a>
+				<div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+					<ul class="nav navbar-nav pull-left">
+						<li>
+						<!---	<a class="btn" id="make-small-nav">
+								<i class="fa fa-bars" style="margin-top:8px; font-size: 2.5em;" ></i>
+							</a>--->
+						</li>
+
+					</ul>
+				</div>
+
+<!--					<div class="nav-no-collapse  hidden-sm hidden-xs center-block" >-->
+<!--						<ul class="nav navbar-nav ">-->
+<!--							<li class="hidden-xxs" id=''  style='' >-->
+
+
+
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</div>-->
+
+
+				<div class="nav-no-collapse pull-right" id="header-nav">
+					<ul class="nav navbar-nav pull-right">
+						<li class="hidden-xxs" id='wiz' >
+<!--							<a href="/whlite/simulation.html" class="table-link" title='Execution Wizard'>-->
+<!--								<i class="fa fa-play"></i>-->
+<!--							</a>-->
+						</li>
+
+						<li class="hidden-xxs" id='disc'  style='display:none'>
+							<a href="/whlite/discovery.html" class="table-link" title='Discover'>
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+
+
+
+						<li class="hidden-xxs" id='curScan' style='display:none'>
+							<a href="/whlite/currentscan.html" class="table-link" title='Current Execution'>
+								<i class="fa fa-spinner"></i>
+							</a>
+						</li>
+						<li class="hidden-xxs" id='repscan' >
+<!--							<a href="/whlite/rerunscan.html" onclick='addWait();' class="table-link" title='Repeat Last Simulation-Run'>-->
+<!--								<i class="fa fa-repeat"></i>-->
+<!--							</a>-->
+						</li>
+						<li class="hidden-xxs" id='report' style = "display: none">
+							<a href="/whlite/lastscanreport.html" class="table-link" title='Last Simulation-Run Report'>
+								<i class="fa fa-file-text"></i>
+							</a>
+						</li>
+						<li class="hidden-xxs" id='cust'  style='display:none'>
+							<a href="/whlite/customize.html" class="table-link" title='Customize'>
+								<i class="fa fa-ellipsis-h"></i>
+							</a>
+						</li>
+						<li class="dropdown profile-dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color:transparent">
+								<span id='uname'><i class="fa fa-user" style="margin-top:18px; font-size: 2.2em;"></i><b class="caret"></b></span>
+								
+							</a>	
+							<ul class="dropdown-menu dropdown-menu-right" style='min-width:100px'>
+								<li><a href="/whlite/changepassword.html"><i class="fa fa-edit"></i>Change Password</a></li>
+								<li><a href="/whlite/logout.html"><i class="fa fa-power-off"></i>Logout </a></li>
+							</ul>
+							
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header>
+		<div id="page-wrapper" class="container nav-small" style="background-color:#eeeef1"> <!--style="background:url(/static/whlite/img/Whitehax_bg.jpg) no-repeat center center fixed" > -->
+			<div class="row">
+			<!----	<div id="nav-col"  style="background:transparent">
+					<section id="col-left" class="col-left-nano">
+						<div id="col-left-inner" class="col-left-nano-content">
+
+							<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">	
+								<ul class="nav nav-pills nav-stacked side_nav">
+									<li class="nav-header nav-header-first hidden-sm hidden-xs">
+									</li>
+
+									<li>
+										<a href="/whlite/main.html">
+											<i class="fa fa-dashboard"></i>
+											<span>Home</span>
+										</a>
+									</li>
+									<li style="">
+										<a href="/whlite/networkscanning.html">
+											<img src = "img/network.png" width="18" height="18">
+											<span style="margin-left:13px">Network scans</span>
+												</a>
+									</li>
+									
+									<li style="">
+										<a href="phishing_add_remove_user.html">
+											<img src = "img/phishing.png" width="18" height="18">
+											<span style="margin-left:13px">Phishing Sim.</span>
+												</a>
+									</li>
+									
+									
+									<li style="">
+										<a href="/whlite/reportsview.html">
+											<i class="fa fa-files-o"></i>
+											<span>Scan Reports </span>
+										</a>
+									</li>
+						             <li style="">
+										<a href="/whlite/devicesreport.html">
+											<i class="fa fa-laptop"></i>
+											<span>Devices </span>
+										</a>
+									</li>
+									<li style="">
+										<a href="/whlite/help.html">
+											<i class="fa fa-question-circle"></i>
+											<span>Help</span>
+												</a>
+									</li>
+
+									<li style = "">
+										<a href="/whlite/extwebsitescan">
+											<i class="fa fa-search"></i>
+											<span>Ext Scan </span>
+										</a>
+									</li>
+
+									<li style = "display:none">
+										<a href="/whlite/historylist.html">
+											<i class="fa fa-folder-open"></i>
+											<span>Reports </span>
+										</a>
+									</li>
+
+									<li id='policies' style='display:none'>
+										<a href="/whlite/profilelist.html">
+											<i class="fa fa-table"></i>
+											<span>Profiles</span>
+										</a>
+									</li>
+									<li id='sscan' style='display:none'>
+										<a href="/whlite/schedulelist.html">
+											<i class="fa fa-clock-o"></i>
+											<span>Scheduled Simulation Run </span>
+										</a>
+									</li>
+									<li id='invt' style='display:none'>
+										<a href="/whlite/inventory.html">
+											<i class="fa fa-database"></i>
+											<span>Inventory</span>
+										</a>
+									</li>
+									<li id='replist' style='display:none'>
+										<a href="/whlite/bi.html">
+											<i class="fa fa-bar-chart"></i>
+											<span>BI </span>
+										</a>
+									</li>
+									<li id='usrlist' style='display:none'>
+										<a href="#" id='users1' class="dropdown-toggle">
+											<i class="fa fa-table"></i>
+											<span>Users </span>
+											<i class="fa fa-angle-right drop-icon"></i>
+										</a>
+										<ul class="submenu" id='submenu2'>
+											<li>
+												<a href="/whlite/userlist.html">
+													User List
+												</a>
+											</li>
+											<li>
+												<a href="/whlite/userroles.html">
+													User Roles
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li id='upd' style='display:none'>
+										<a href="/whlite/update.html">
+											<i class="fa fa-refresh"></i>
+											<span>Updates </span>
+											<span id ="avail" class="label label-success pull-right"></span>
+										</a>
+									</li>
+
+									<li id='sysconf' style='display:none'>
+										<a href="/whlite/systemconfig.html">
+											<i class="fa fa-sliders"></i>
+											<span>System Config </span>
+										</a>
+									</li>
+
+									<br>
+
+								</ul>
+							</div>
+						</div>
+					</section>
+					<div id="nav-col-submenu"></div>
+				</div>---->
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<div id="content-wrapper" style="background:transparent; min-height:1220px; " >
+
+<div class="col-lg-12">
+			<div class="row">
+				<div class="col-lg-12">
+					<div id="content-header" class="clearfix">
+						<div class="pull-left">
+							<!---<ol class="breadcrumb">
+								<li><a href="#">Home</a></li>
+								<li class="active"><span>Phishing Tutorial</span></li>
+							</ol>--->
+							
+							<h1 >Office 365 phishing Tutorial</h1>
+						</div>
+						
+						
+						
+					</div>
+				</div>
+			</div>
+			<div id="errorDiv" style="display:none">
+				<div class="alert alert-danger" role="alert"></div>
+			</div>
+			
+			
+			<div class="panel panel-default panelTot content"  style="padding-bottom:15px;">
+    	<div class="panel-body">
+		<div class="row" >
+		
+		<div class="col-md-2"></div>
+			
+		  <div class="col-md-8">
+		<h2 style="padding:10px 0 10px 0px">	 Learn  steps to detect and stop Office 365 phishing. </h2>
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">This tutorial explains how to detect Office 365 phishing, in few easy steps. </p>
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">Email-hosting services like Office 365 have become so popular. Such cloud-based email services remove a lot of the headaches caused by email configuration. Users can go directly to an Office 365 web page, enter their company credentials and log right into their email accounts from anywhere they like. Of course, its popularity has led to malicious attacks. Attackers are crafting and launching phishing campaigns targeting Office 365 users.</p>
+
+
+		</div>
+				<div class="col-md-2"></div>
+				</div>
+				
+				
+		<div class="row" style="margin-bottom:25px;">
+		<div class="col-md-2"></div>
+    		        <div class="col-md-4">
+				
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
+<strong>The attack chain </strong> <br/>The methods used by attackers to gain access to an Office 365 account are fairly straightforward. The phishing campaigns usually take the form of an email from Microsoft. The email contains a request to log in, claiming the user needs to reset their password, hasn’t logged in recently, or that there’s a problem with the account that needs their attention. A URL is included, enticing the reader to click to remedy the issue. <br/> 
+
+<p><strong>The chain of events usually plays out like this:</strong></p>
+<p>1. Attacker sends a phishing email that appears to come from Microsoft or another trusted source.</p>
+<p>2. User clicks on link in the email, which brings them to a page mimicking the Office 365 login page.</p>
+<p>3. User enters login credentials, which are scooped up by the attackers.</p>
+<p>4. User enters login credentials, which are scooped up by the attackers.</p>
+
+
+
+
+
+ </p>
+ 
+ <br/>
+  <br/>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+					
+            
+        </div>
+		
+		<div class="col-md-4" style="text-align:center; padding-bottom:35px; ">
+	<img class="sampleimage" src="img/office1.jpg" data-largesrc="img/office1.jpg" /> 
+		
+           <div class="hover1" style="padding-top:20px;">Hover to Zoom Image</div> 
+        </div>
+		
+		<div class="col-md-2"></div>
+		
+		</div>
+		
+	<div class="row" style="margin-bottom:25px;">
+		<div class="col-md-2"></div>
+    		        <div class="col-md-4">
+				
+ <p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
+<strong>Microsoft has number of security technologies into its Office 365 offerings  </strong> <br/>There are several steps you can take to further protect your email: <br/> 
+
+
+<p><strong>1. Use multi-factor authentication:</strong> If a login attempt requires a secondary authorization before someone is allowed access to an inbox, this will stop many attackers, even with phished credentials.</p>
+<p><strong>2. Deploy advanced anti-phishing technologies:</strong> Some machine-learning technologies can use local identity and relationship modeling alongside behavioral analytics to spot deception-based threats.</p>
+<p><strong>3. Run regular phishing exercises:</strong> Regular, mandated phishing exercises across the entire organization will help to train employees to recognize phishing emails, so that they don’t click on malicious URLs, or enter their credentials into malicious websites. For instance, Duo offers a free phishing simulation tool, called Duo Insight.</p>
+
+ </p>
+
+					
+            
+        </div>
+		
+		<div class="col-md-4" style="text-align:center; padding-bottom:35px;">
+		<img class="sampleimage" src="img/office2.jpg" data-largesrc="img/office2.jpg" /> 
+		
+           <div class="hover1" style="padding-top:20px;">Hover to Zoom Image</div> 
+        </div>
+		
+		<div class="col-md-2"></div>
+		
+		</div>
+		
+		
+			
+		
+		
+	<!---	<div class="col-md-8">
+				
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
+<strong>Step 2: </strong> Sender’s email address   If the email Subject or body seems suspicious then, next thing is to look at the Sender’s email address.   Click on the Sender’s emails once or on some devices, twice and a pop-up will show the details of the sender’s email. Invariably, the email address will not have domain name that reflects the email’s subject or message. <br/> <strong>  NOTE: </strong>No legit email will have unrecognizable domain. </p>
+
+					
+            
+        </div>
+		
+		<div class="col-md-4" style="text-align:center; padding-bottom:35px;">
+		<img src="img/step2-1.jpg"  width="45%"  />
+            
+        </div>
+		
+		
+		
+		<div class="col-md-8">
+				
+
+<p style="font-size: 15px;color:#000000;line-height: 1.6;font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif; text-align: justify;">
+<strong>Step 3: </strong> Attachments or URL links in the email body   Another common characteristic of malicious emails is either having an attachment (pdf, word or other common formats) OR a URL Link that the email prods you to click.  <br/> <strong> NOTE: </strong> Unless you initiated or requested something back, no legit company will send you an email with an attachment or URL Link for you to click.   Do not click the URL link or attachment in such emails. If you accidently do, close browser and delete any downloaded files from your device.</p>
+
+					
+            
+        </div>
+		
+		<div class="col-md-4" style="text-align:center;">
+		<img src="img/step3.jpg"  width="45%"  />
+            
+        </div>--->
+		
+		
+		
+    	</div>
+		
+		
+		
+    </div>
+			
+			
+		</div>
+
+
+				  
+
+        
+   
+      
+      
+      <div class="loading">
+          <span class="animation">Download will start momentarily.Please wait and do not click “start verification again”<span id="loadingDots"></span></span>
+      </div>
+    <script src="js/canvasjs.min.js"></script>
+<script>
+
+
+
+var OSName =""
+var ip_addr = "";
+    window.onload = function () {
+    /*
+       var ip_address = ''
+            $.ajax({
+                type: 'GET',
+                url: 'https://api.ipify.org?format=json',
+                success: function(data) {
+                   ip_address = data.ip
+                   console.log("ip>>>>",ip_address )
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/firewallscan?ip='+ ip_address,
+                success: function(data) {
+                 console.log("data",data)
+                 alert('open ports on ip: '+ip_address+'--are: '+data)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+*/
+
+    getOS();
+    showLoadingDots();
+    var role = "runscan";
+    console.log("role",role)
+    if(role === 'radmin' || role === 'admin'){
+        $('#onetimelogin').show();
+        $('#downloadcustdata').show();
+    }else{
+        $('#onetimelogin').hide();
+        $('#downloadcustdata').hide();
+    }
+    }
+
+    function startverification(){
+        if($("#webrb").is(":checked")){
+           location.href = "/whlite/simulation.html"
+        }else if($("#linuxsderb").is(":checked")){
+          console.log("linux radio button is checked")
+            $(".loading").css("display","block");
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/getSdeName?os='+OSName,
+                success: function(data) {
+                   var exedata = data;
+                   downloadURI('/whlite/downloadexecutable?os=' +OSName,exedata);
+                   $(".loading").css("display","none");
+                   setTimeout(sdeAlert, 8000)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+            setTimeout(sdeStarted, 2000);
+        }else if($("#macossderb").is(":checked")){
+          console.log("linux radio button is checked")
+            $(".loading").css("display","block");
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/getSdeName?os='+OSName,
+                success: function(data) {
+                   var exedata = data;
+                   downloadURI('/whlite/downloadexecutable?os=' +OSName ,exedata);
+                   $(".loading").css("display","none");
+                   setTimeout(sdeAlert, 8000)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+            setTimeout(sdeStarted, 2000);
+        }else if($("#winsderb").is(":checked")){
+            console.log("enetredddddd")
+            $(".loading").css("display","block");
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/getSdeName?os='+OSName,
+                success: function(data) {
+                   var exedata = data;
+                   console.log("exedata",exedata)
+                  downloadURI('/whlite/downloadexecutable?os=' +OSName,exedata)
+                   $(".loading").css("display","none");
+                   setTimeout(sdeAlert, 8000)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+            setTimeout(sdeStarted, 2000);
+        }else{
+        }
+    }
+var timesRun = 0;
+function sdeStarted(){
+var timer = setInterval(function (){
+        $.ajax({
+            type: 'GET',
+            url: '/whlite/sde',
+            success: function(data) {
+                if (data === "Yes"){
+                    console.log("data>>>>",data)
+                    clearInterval(timer);
+                    location.href = "/whlite/simulationsde.html";
+                }
+                else{
+                        timesRun += 1;
+                        if(timesRun === 600){
+                            clearInterval(timer);
+                            $(".sdealert").css("display","block");
+                            $(".changealertText").text('The waiting time for user response is over. Please select attack and start verification again.');
+                        }
+                }
+            },
+            error: function() {
+                console.log("error>>>>")
+            }
+        });
+     },3000)
+}
+
+function sdeAlert(){
+    $(".sdealert").css("display","block");
+    $(".sdealert").fadeOut(7000);
+    $(".changealertText").text('Please click on downloaded executable to proceed with the verification');
+}
+
+
+
+function downloadURI(uri, name) 
+{
+    console.log("uri",uri)
+    console.log("name",name)
+    var link = document.createElement("a");
+    // If you don't know the name or want to use
+    // the webserver default set name = ''
+    link.setAttribute('download', name);
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+
+function getOS() {
+    OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+    console.log('Your OS: '+OSName);
+     if(OSName === "Windows"){
+        document.getElementById("linuxsderb").disabled = true;
+        document.getElementById("macossderb").disabled = true;
+     }else if(OSName === "Linux" || OSName === "UNIX"){
+        document.getElementById("winsderb").disabled = true;
+        document.getElementById("macossderb").disabled = true;
+     }else{
+        document.getElementById("winsderb").disabled = true;
+        document.getElementById("linuxsderb").disabled = true;
+     }
+}
+
+var showLoadingDots = function() {
+    var showDots = setInterval(function(){
+    //look for the element with id=loadingDots
+    //if not found clear the interval
+    if ($("#loadingDots").length>0) {
+        var dots = '...',i=1;
+        if ($("#loadingDots").html().length==0 || ($("#loadingDots").html().length == dots.length)){
+            $("#loadingDots").html('');
+            var i = 1;
+        } else {
+            i++;
+        }
+        $("#loadingDots").html($("#loadingDots").html()+".");
+        } else {
+           //clear the interval, if element not found
+           clearInterval(showDots);
+        }
+    },400);
+}
+</script>
+
+
+<style>
+.main-box {
+  background: #E3E9F9;
+}
+.breadcrumb > li a {
+  color: #000000;
+}
+.breadcrumb > .active{
+  color: #000000;
+}
+/*.buttons{
+    padding-left: 30px;
+    background-color: red;
+}*/
+.buttonStyling{
+    color:#f5f5f5;
+    margin:10px;
+}
+#buttons :first-child {
+    float: none;
+}
+#buttons :nth-child(2) {
+    float: none
+}
+#buttons {
+    text-align: center;
+}
+.sdealert{
+    padding: 5px;
+    display: none;
+}
+.sdealertText{
+    text-align: center;
+    color: red;
+}
+.otlogin{
+    background-color: #03a9f4 !important;
+}
+.otlogin:hover{
+    background-color: #0022ff !important;
+}
+.radioFont{
+    font-size: 15px;
+}
+.loading{
+    text-align: center;
+    display:none;
+}
+.animation{
+     font-size:16px;
+     color:black;
+}
+</style>
+
+					<footer id="footer-bar" class="row">
+						<p id="footer-copyright" class="col-xs-12">
+							Powered by WhiteHAX
+						</p>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- global scripts -->
+
+<!--	<script src="/static/whlite/js/demo-skin-changer.js"></script>-->
+ <!-- only for demo -->
+
+<!--	<script src="/static/whlite/js/demo.js"></script>--> 
+	<!-- only for demo -->
+
+	<!-- theme scripts -->
+<script src="js/scripts.js"></script>
+<script src="js/pace.min.js"></script>
+
+<script>
+	$(document).ready( function(){
+		$.get('/whlite/getUserPrivileges/',function () {
+		})
+		.fail(function() {
+				console.log("getUserPrivileges error");
+			})
+		.done(function(data) {
+			console.log('getUserPrivileges: ' +data);
+			if (data != '')
+			{
+
+				var values = data.split('$');
+				var user = document.getElementById('uname');
+				user.innerHTML= '<i class="fa fa-user"></i> ' + values[0] + ' <b class="caret"></b>';
+
+				var value1 = parseInt(values[2]); 			//policy
+				var value2 = parseInt(values[3]); 			//scan
+				var value3 = parseInt(values[4]); 			// sch scan
+				var value4 = parseInt(values[5]); 			// report
+				var value5 = parseInt(values[6]); 			// infra
+				var value6 = parseInt(values[7]); 			// monitor
+				var value7 = parseInt(values[8]); 			// system
+
+				if ((value1&2) == 0)		// policy
+				{
+					$('#addProf').attr('disabled', true);
+					$('#saveprofbutton').attr('disabled', true);
+
+					butList = document.getElementsByName("profdelete");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				if ((value2&1) == 0)		// scan
+				{
+					$('#wiz').hide();
+					$("#repscan").hide();
+
+					$('#run_simulation').attr('disabled', true);
+
+					var butList = document.getElementsByName("repeat");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				if ((value3&1) == 0)		// sch scan
+				{
+					$("#sscan").hide();
+					$('#addSchedule').attr('disabled', true);
+
+					butList = document.getElementsByName("schedit");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+
+					butList = document.getElementsByName("schdelete");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				if ((value4&4) == 0)		// report
+				{
+					$('#report').hide();
+					butList = document.getElementsByName("pdfreport");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				//if ((value5&1) == 0)		// infra
+
+				if ((value6&1) == 0)		// monitor: irrelevant in scanner
+				{
+				}
+
+				if ((value7&1) == 0)		// system
+				{
+					$("#sysconf").hide();
+					$("#upd").hide();
+				}
+				else
+				{
+					$("#sysconf").show();
+					$("#upd").show();
+				}
+
+				var userid = 29;
+				var usercreatedby = 1;
+				var usertype = 2;
+				if (parseInt(userid) == 1)
+					$("#usrlist").show();
+			}
+		});
+
+	    /*
+	    var checkUpdates = function () {
+			$(document).ready(function(){
+				$.get('/whlite/chkSwUpdates/',function () {
+				})
+				.fail(function() {
+						console.log("error");
+					})
+				.done(function(data) {
+					if (data != 0)
+						$( "#avail" ).html( 'Available' );
+				})
+			});
+		}
+		checkUpdates();
+		*/
+
+	});
+
+	$.get('/whlite/chkCurScan/',function () {
+	})
+	.fail(function() {
+			console.log("error");
+		})
+	.done(function(data) {
+		console.log(' Scan in progress: ' + parseInt(data));
+		if (parseInt(data) != 0)
+		{
+			$( "#curScan" ).show();
+			$( "#simprog" ).show();
+			$( "#runsim" ).hide();
+		}
+		else
+		{
+			$( "#simprog" ).hide();
+			$( "#runsim" ).show();
+		}
+	});
+
+	function addWait()
+	{
+		$("*").css("cursor", "wait");
+	}
+
+	</script>
+
+	<script>
+
+jQuery(function($){ // on DOM load
+	$('.sampleimage').zoomio({
+		fadeduration: 500
+	})
+})
+
+</script>
+	
+<style>
+
+.center-brand-logo {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.theme-whbl #header-navbar {
+    background-color: #088af7; !important
+}
+
+.theme-whbl .navbar > .container .navbar-brand {
+    color: #bdbdbd;
+}
+
+.theme-whbl #sidebar-nav .nav > li > a {
+  color: #000; !important
+}
+
+.theme-whbl h1 {
+    color: #088af7; !important
+}
+
+.theme-whbl .nav-tabs > li > a  {
+    border-color: #ddd; !important
+
+}
+
+.theme-whbl .btn-primary {
+    background-color: #bdbdbd; !important
+    border-color: #bdbdbd; !important
+}
+
+.theme-whbl .btn-primary:hover {
+    background-color: #bdbdbd; !important
+    border-color: #bdbdbd; !important
+}
+
+.theme-whbl .btn-success {
+    background-color: #088af7;
+    border-color: #000000;
+}
+
+.theme-whbl .btn-success:hover{
+    background-color: #0022ff;
+    border-color: #483C3C;
+}
+
+.theme-whbl #header-navbar .nav > li > a:hover {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.green-bg {
+    background-color: #bdbdbd !important;
+    border-color: #bdbdbd; !important
+}
+li .active{
+	background-color: #6c757d;
+	color:#0052CC;
+}
+
+</style>
+
+</body>
+</html>
