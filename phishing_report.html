@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="google-site-verification" content="UUjLmm5RDhmuCWAKv4jIGeMQvwuttg4-X_lHjDObOJo" />	
+	<title>WhiteHax Lite</title>
+
+	
+	
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	
+	<!-- RTL support - for demo only -->
+	<script src="js/demo-rtl.js"></script>
+	
+	<!-- libraries -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- global styles -->
+	<link rel="stylesheet" type="text/css" href="css/theme_styles.css" />
+	<link rel="stylesheet" href="css/morris.css" type="text/css" />
+
+	
+	<!-- this page specific styles -->
+	<link rel="stylesheet" href="css/daterangepicker.css" type="text/css" />
+	<link rel="stylesheet" href="css/jquery-jvectormap-1.2.2.css" type="text/css" />
+	<link rel="stylesheet" href="css/weather-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/select2.css" type="text/css" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
+	
+	<!-- Favicon -->
+	<link type="image/x-icon" href="/static/whlite/img/favicon.ico" rel="shortcut icon" />
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/jquery.nanoscroller.min.js"></script>
+
+</head>
+
+
+<body class="pace-done theme-whbl" >
+	<div id="theme-wrapper">
+		<header class="navbar" id="header-navbar" style="height:80px">
+			<div class="container">
+				<a href="/whlite/main.html" id="logo" class="navbar-brand">
+<!--					<img src="/static/whlite/img/logo1.png" alt="" class="normal-logo logo-white"/>-->
+<!--					<img src="/static/whlite/img/None" alt="" class="normal-logo logo-white"/>-->
+					<label style="font-size:40px;color: #fff;margin-top: 20px;">White</label><label style="font-size:40px;color: #ff0000;margin-top: 6px;">HaX</label>
+				</a>
+				<div class="clearfix">
+				<button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button" >
+					<span class="sr-only" >Toggle navigation</span>
+					<span class="fa fa-bars"></span>
+				</button>
+
+				<a href="/whlite/main.html" id="logo" class="center-brand-logo" >
+										<img src="/static/whlite/img/None" alt="" class="normal-logo logo-white" style="height:55px" />
+				</a>
+				<div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+					<ul class="nav navbar-nav pull-left">
+						<li>
+							<a class="btn" id="make-small-nav">
+								<i class="fa fa-bars" style="margin-top:8px; font-size: 2.5em;" ></i>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+
+<!--					<div class="nav-no-collapse  hidden-sm hidden-xs center-block" >-->
+<!--						<ul class="nav navbar-nav ">-->
+<!--							<li class="hidden-xxs" id=''  style='' >-->
+
+
+
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</div>-->
+
+
+				<div class="nav-no-collapse pull-right" id="header-nav">
+					<ul class="nav navbar-nav pull-right">
+						<li class="hidden-xxs" id='wiz' >
+<!--							<a href="/whlite/simulation.html" class="table-link" title='Execution Wizard'>-->
+<!--								<i class="fa fa-play"></i>-->
+<!--							</a>-->
+						</li>
+
+						<li class="hidden-xxs" id='disc'  style='display:none'>
+							<a href="/whlite/discovery.html" class="table-link" title='Discover'>
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+
+
+
+						<li class="hidden-xxs" id='curScan' style='display:none'>
+							<a href="/whlite/currentscan.html" class="table-link" title='Current Execution'>
+								<i class="fa fa-spinner"></i>
+							</a>
+						</li>
+						<li class="hidden-xxs" id='repscan' >
+<!--							<a href="/whlite/rerunscan.html" onclick='addWait();' class="table-link" title='Repeat Last Simulation-Run'>-->
+<!--								<i class="fa fa-repeat"></i>-->
+<!--							</a>-->
+						</li>
+						<li class="hidden-xxs" id='report' style = "display: none">
+							<a href="/whlite/lastscanreport.html" class="table-link" title='Last Simulation-Run Report'>
+								<i class="fa fa-file-text"></i>
+							</a>
+						</li>
+						<li class="hidden-xxs" id='cust'  style='display:none'>
+							<a href="/whlite/customize.html" class="table-link" title='Customize'>
+								<i class="fa fa-ellipsis-h"></i>
+							</a>
+						</li>
+						<li class="dropdown profile-dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" style="background-color:transparent">
+								<span id='uname'><i class="fa fa-user" style="margin-top:18px; font-size: 2.2em;"></i><b class="caret"></b></span>
+								
+							</a>	
+							<ul class="dropdown-menu dropdown-menu-right" style='min-width:100px'>
+								<li><a href="/whlite/changepassword.html"><i class="fa fa-edit"></i>Change Password</a></li>
+								<li><a href="/whlite/logout.html"><i class="fa fa-power-off"></i>Logout </a></li>
+							</ul>
+							
+						</li>
+					</ul>
+				</div>
+				</div>
+			</div>
+		</header>
+		<div id="page-wrapper" class="container nav-small" style="background-color:#eeeef1"> <!--style="background:url(/static/whlite/img/Whitehax_bg.jpg) no-repeat center center fixed" > -->
+			<div class="row">
+				<div id="nav-col"  style="background:transparent">
+					<section id="col-left" class="col-left-nano">
+						<div id="col-left-inner" class="col-left-nano-content">
+
+							<div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">	
+								<ul class="nav nav-pills nav-stacked side_nav">
+									<li class="nav-header nav-header-first hidden-sm hidden-xs">
+									</li>
+
+									<li>
+										<a href="/whlite/main.html">
+											<i class="fa fa-dashboard"></i>
+											<span>Home</span>
+										</a>
+									</li>
+									<li style="">
+										<a href="/whlite/networkscanning.html">
+											<img src = "img/network.png" width="18" height="18">
+											<span style="margin-left:13px">Network scans</span>
+												</a>
+									</li>
+									
+									<li style="">
+										<a href="phishing_add_remove_user.html">
+											<img src = "img/phishing.png" width="18" height="18">
+											<span style="margin-left:13px">Phishing Sim.</span>
+												</a>
+									</li>
+									
+									
+									<li style="">
+										<a href="/whlite/reportsview.html">
+											<i class="fa fa-files-o"></i>
+											<span>Scan Reports </span>
+										</a>
+									</li>
+						             <li style="">
+										<a href="/whlite/devicesreport.html">
+											<i class="fa fa-laptop"></i>
+											<span>Devices </span>
+										</a>
+									</li>
+									<li style="">
+										<a href="/whlite/help.html">
+											<i class="fa fa-question-circle"></i>
+											<span>Help</span>
+												</a>
+									</li>
+
+									<li style = "">
+										<a href="/whlite/extwebsitescan">
+											<i class="fa fa-search"></i>
+											<span>Ext Scan </span>
+										</a>
+									</li>
+
+									<li style = "display:none">
+										<a href="/whlite/historylist.html">
+											<i class="fa fa-folder-open"></i>
+											<span>Reports </span>
+										</a>
+									</li>
+
+									<li id='policies' style='display:none'>
+										<a href="/whlite/profilelist.html">
+											<i class="fa fa-table"></i>
+											<span>Profiles</span>
+										</a>
+									</li>
+									<li id='sscan' style='display:none'>
+										<a href="/whlite/schedulelist.html">
+											<i class="fa fa-clock-o"></i>
+											<span>Scheduled Simulation Run </span>
+										</a>
+									</li>
+									<li id='invt' style='display:none'>
+										<a href="/whlite/inventory.html">
+											<i class="fa fa-database"></i>
+											<span>Inventory</span>
+										</a>
+									</li>
+									<li id='replist' style='display:none'>
+										<a href="/whlite/bi.html">
+											<i class="fa fa-bar-chart"></i>
+											<span>BI </span>
+										</a>
+									</li>
+									<li id='usrlist' style='display:none'>
+										<a href="#" id='users1' class="dropdown-toggle">
+											<i class="fa fa-table"></i>
+											<span>Users </span>
+											<i class="fa fa-angle-right drop-icon"></i>
+										</a>
+										<ul class="submenu" id='submenu2'>
+											<li>
+												<a href="/whlite/userlist.html">
+													User List
+												</a>
+											</li>
+											<li>
+												<a href="/whlite/userroles.html">
+													User Roles
+												</a>
+											</li>
+										</ul>
+									</li>
+
+									<li id='upd' style='display:none'>
+										<a href="/whlite/update.html">
+											<i class="fa fa-refresh"></i>
+											<span>Updates </span>
+											<span id ="avail" class="label label-success pull-right"></span>
+										</a>
+									</li>
+
+									<li id='sysconf' style='display:none'>
+										<a href="/whlite/systemconfig.html">
+											<i class="fa fa-sliders"></i>
+											<span>System Config </span>
+										</a>
+									</li>
+
+									<br>
+
+								</ul>
+							</div>
+						</div>
+					</section>
+					<div id="nav-col-submenu"></div>
+				</div>
+<div id="content-wrapper" style="background:transparent">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ol class="breadcrumb breadcrumb-arrow">
+                <li><a href="#">Reports</a></li>
+                <li class="active"><span style="color:#00008B;font-size: 15px;">Phishing Simulation</span></li>
+            </ol>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-primary btnActions pull-right pdfButtons" data-toggle="modal" data-target="#emailModal">Email Report</button>
+            <button type="button" data-toggle="modal" data-target="#pdfModal" class="btn btn-primary btnActions pull-right pdfButtons">Print Report</button>
+        </div>
+    </div>
+    <!--  user details -->
+    <div class="row panelTot">
+        <!--         <div class="col-md-3" id="report_details"></div>
+        <div class="col-md-9"></div> -->
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p><b>Personal device</b> : DESKTOP-S55MPIQ</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p><b>Profile</b> : </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p><b>User</b> : test_user1</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p><b>Generated At</b> : July 11, 2022, 5:38 a.m.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-primary panel-style">
+                <div class="panel-heading">
+                    <span>
+                        <!-- Tabs -->
+                        <ul class="nav panel-tabs">
+                            <li class="active"><a href="#summary" data-toggle="tab">Summary</a></li>
+                            <li class=""><a href="#remediation" data-toggle="tab">Remediation</a></li>
+<!--                            <li><a href="#resources" data-toggle="tab">Resources</a></li>-->
+                        </ul>
+                    </span>
+                </div>
+                <div class="panel-body content">
+                    <div class="overlay" style="position: relative;">
+                        <div class="overlay-content">
+                            <h4 class="loading text-primary" style="display: none;">Loading<span class="one">.</span><span class="two">.</span><span class="three">.</span></h4>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="summary">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="panel panel-default panelStyle">
+                                        <div class="panel-body">
+                                            <h5><b>Test Details</b></h5>
+                                            <p><b>Total Test</b> : 9</p>
+                                            <p><b>Failed Tests</b> : 1</p>
+                                            <p><b>Passed Tests</b> : 8</p>
+                                            <p><b>Operating System</b> : Windows-10</p>
+<!--                                            <p><b>Browser</b> : Firefox</p>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel panel-default panelStyle">
+                                        <div class="panel-body">
+                                            <h5><b>Phishing Readiness</b> <i class="fa fa-info-circle help_icon" aria-hidden="true" title="Overall Readiness is a measure of cyber-readiness of your business’ cyber security, controls and policies. It is based on number of attacks, breach scenarios and tests performed by WhiteHaX. The overall readiness score under 35% is considered low and has a high risk of potential breach; 35% to 65% is considered medium risk and above 65% is considered a good score, with the number being higher the better."></i></h5>
+                                            <div id="overall_readiness"><svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.25px; top: -0.28125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.4</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><filter id="inner-shadow-overall_readiness"><feOffset dx="0" dy="3"></feOffset><feGaussianBlur result="offset-blur" stdDeviation="5"></feGaussianBlur><feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"></feComposite><feFlood flood-color="black" flood-opacity="0.2" result="color"></feFlood><feComposite operator="in" in="color" in2="inverse" result="shadow"></feComposite><feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite></filter></defs><path fill="#edebeb" stroke="none" d="M150.6875,124L121.625,124A77.5,77.5,0,0,1,276.625,124L247.5625,124A48.4375,48.4375,0,0,0,150.6875,124Z" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" filter="url(#inner-shadow-overall_readiness)"></path><path fill="#00a000" stroke="none" d="M150.6875,124L121.625,124A77.5,77.5,0,0,1,271.1826776563395,95.47034716693746L244.1610485352122,106.16896697933592A48.4375,48.4375,0,0,0,150.6875,124Z" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" filter="url(#inner-shadow-overall_readiness)"></path><text x="199.125" y="24.21875" text-anchor="middle" font-family="sans-serif" font-size="15px" stroke="none" fill="#999999" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 15px; font-weight: bold; fill-opacity: 1;" font-weight="bold" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="199.125" y="121.5686274509804" text-anchor="middle" font-family="Arial" font-size="23px" stroke="none" fill="#010101" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 23px; font-weight: bold; fill-opacity: 1;" font-weight="bold" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">88</tspan></text><text x="199.125" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="136.15625" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><text x="262.09375" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel panel-default panelStyle">
+                                        <div class="panel-body">
+                                            <h5><b>Phishing Tutorial Readiness</b> <i class="fa fa-info-circle help_icon" aria-hidden="true" title="Email Readiness is a measure of Email security, controls and policies. The overall readiness score under 35% is considered low and has a high risk of potential breach thru email based attacks; 35% to 65% is considered medium risk and above 65% is considered a good score, with the higher number being better for Email related risks."></i></h5>
+                                            <div id="email_security"><svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.5px; top: -0.28125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.4</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><filter id="inner-shadow-email_security"><feOffset dx="0" dy="3"></feOffset><feGaussianBlur result="offset-blur" stdDeviation="5"></feGaussianBlur><feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"></feComposite><feFlood flood-color="black" flood-opacity="0.2" result="color"></feFlood><feComposite operator="in" in="color" in2="inverse" result="shadow"></feComposite><feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite></filter></defs><path fill="#edebeb" stroke="none" d="M150.6875,124L121.625,124A77.5,77.5,0,0,1,276.625,124L247.5625,124A48.4375,48.4375,0,0,0,150.6875,124Z" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" filter="url(#inner-shadow-email_security)"></path><path fill="#00a000" stroke="none" d="M150.6875,124L121.625,124A77.5,77.5,0,0,1,253.92577554195742,69.19922445804258L233.37548471372338,89.7495152862766A48.4375,48.4375,0,0,0,150.6875,124Z" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" filter="url(#inner-shadow-email_security)"></path><text x="199.125" y="24.21875" text-anchor="middle" font-family="sans-serif" font-size="15px" stroke="none" fill="#999999" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 15px; font-weight: bold; fill-opacity: 1;" font-weight="bold" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="199.125" y="121.5686274509804" text-anchor="middle" font-family="Arial" font-size="23px" stroke="none" fill="#010101" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 23px; font-weight: bold; fill-opacity: 1;" font-weight="bold" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">75</tspan></text><text x="199.125" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="136.15625" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><text x="262.09375" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel panel-default panelStyle">
+                                        <div class="panel-body">
+                                            <h5><b>Phishing Quiz Readiness</b> <i class="fa fa-info-circle help_icon" aria-hidden="true" title="Web Readiness is a measure of Web related security, controls and policies. The overall readiness score under 35% is considered low and has a high risk of potential breach thru Web-based attacks; 35% to 65% is considered medium risk and above 65% is considered a good score, with the higher number being better for Web-based threats."></i></h5>
+                                            <div id="web_security"><svg height="100%" version="1.1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.75px; top: -0.28125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.4</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><filter id="inner-shadow-web_security"><feOffset dx="0" dy="3"></feOffset><feGaussianBlur result="offset-blur" stdDeviation="5"></feGaussianBlur><feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"></feComposite><feFlood flood-color="black" flood-opacity="0.2" result="color"></feFlood><feComposite operator="in" in="color" in2="inverse" result="shadow"></feComposite><feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite></filter></defs><path fill="#edebeb" stroke="none" d="M150.6875,124L121.625,124A77.5,77.5,0,0,1,276.625,124L247.5625,124A48.4375,48.4375,0,0,0,150.6875,124Z" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" filter="url(#inner-shadow-web_security)"></path><path fill="#00a000" stroke="none" d="M150.6875,124L121.625,124A77.5,77.5,0,0,1,276.625,124L247.5625,124A48.4375,48.4375,0,0,0,150.6875,124Z" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" filter="url(#inner-shadow-web_security)"></path><text x="199.125" y="24.21875" text-anchor="middle" font-family="sans-serif" font-size="15px" stroke="none" fill="#999999" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 15px; font-weight: bold; fill-opacity: 1;" font-weight="bold" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="199.125" y="121.5686274509804" text-anchor="middle" font-family="Arial" font-size="23px" stroke="none" fill="#010101" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 23px; font-weight: bold; fill-opacity: 1;" font-weight="bold" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><text x="199.125" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></tspan></text><text x="136.15625" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><text x="262.09375" y="138.49170437405732" text-anchor="middle" font-family="Arial" font-size="10px" stroke="none" fill="#b3b3b3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 10px; font-weight: normal; fill-opacity: 1;" font-weight="normal" fill-opacity="1"><tspan dy="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body panelTableStyle">
+                                            <h5><b>Security Status</b></h5>
+                                            <div>
+                                                <table class="table table-hover">
+                                                    <thead>
+                                                        <tr class="theadStyle">
+                                                            <th>Security Solution</th>
+                                                            <th>Readiness</th>
+                                                            <th>Email/Quiz Tested</th>
+                                                            <th>Security Risk</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class=" tbodyStyle" id="security_status"><tr><td>Emails <i class="fa fa-info-circle help_icon" aria-hidden="true" title="Web Vulnerability focuses on whether there are externally visible, exploitable attack surfaces."></i></td><td><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">85%</div></div></td><td>7</td><td><span class="label label-success">Low</span></td></tr>
+													
+													
+													<tr><td>Quiz <i class="fa fa-info-circle help_icon" aria-hidden="true" title="Firewall Security focuses on safety of operations managed by router as it the gateway to home or office network."></i></td><td><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">100%</div></div></td><td>2</td><td><span class="label label-success">Low</span></td></tr>
+													
+													
+													<tr><td>Phishing Tutorial <i class="fa fa-info-circle help_icon" aria-hidden="true" title="Firewall Security focuses on safety of operations managed by router as it the gateway to home or office network."></i></td><td><div class="progress"><div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:70%">70%</div></div></td><td>2</td><td><span class="label label-success">Low</span></td></tr>
+													
+													
+													</tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="remediation">
+                            <div class="row">
+<!--                                <div class="col-md-12">-->
+<!--                                    <div class="panel panel-default">-->
+<!--                                        <div class="panel-body">-->
+<!--                                            <h5><b>Top 3 Risks</b></h5>-->
+<!--                                            <table class="table table-hover">-->
+<!--                                                <thead>-->
+<!--                                                    <tr class="theadStyle">-->
+<!--                                                    	<th>Attack Name</th>-->
+<!--                                                        <th>Security Solution Type</th>-->
+<!--                                                        <th>Description</th>-->
+<!--                                                        <th>Risk Score</th>-->
+<!--                                                        <th>Remediation</th>-->
+<!--                                                    </tr>-->
+<!--                                                </thead>-->
+<!--                                                <tbody class="tbodyStyle panelTableStyle" id="top_risks">-->
+<!--                                                </tbody>-->
+<!--                                            </table>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <div class="col-md-12">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body panelTableStyle">
+                                            <h5><b>List of all tests</b></h5>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr class="theadStyle">
+                                                        <th>Attack Name</th>
+                                                        <th>Category</th>
+                                                        <th>Status</th>
+                                                        <th>Time(Sec)</th>
+                                                        <th>Severity(Weight)</th>
+                                                        <th>Test Details</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tbodyStyle" id="all_tests"><tr><td>WH Network FW Scan</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-danger">9</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('25','WH_Network_FW_Scan')">Details</a></td></tr><tr><td>WH Wifi Passwd Strength</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>2</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('116','WH_Wifi_Passwd_Strength')">Details</a></td></tr><tr><td>WH Network FW Ext Scan</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-danger">8</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('119','WH_Network_FW_Ext_Scan')">Details</a></td></tr><tr><td>WH Wifi Encrypt Strength</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('120','WH_Wifi_Encrypt_Strength')">Details</a></td></tr><tr><td>WH Wifi Router IP Default</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('121','WH_Wifi_Router_IP_Default')">Details</a></td></tr><tr><td>WH Wifi Router Admin Access</td><td>Network Security Monitors</td><td><span class="label label-danger">Breached</span></td><td>1</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('122','WH_Wifi_Router_Admin_Access')">Details</a></td></tr><tr><td>WH Wifi DNS Poisoning</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('123','WH_Wifi_DNS_Poisoning')">Details</a></td></tr><tr><td>WH Wifi VPN NAT</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('124','WH_Wifi_VPN_NAT')">Details</a></td></tr><tr><td>WH Wifi Eavesdropping</td><td>Network Security Monitors</td><td><span class="label label-default">Blocked</span></td><td>1</td><td><span class="label label-success">2</span></td><td><a class="linkBtn" data-toggle="modal" data-target="#detailsModal" onclick="modaldetaildata('125','WH_Wifi_Eavesdropping')">Details</a></td></tr></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="resources">
+                            <div class="row" id="resourcesData"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+    <script src="js/canvasjs.min.js"></script>
+<script>
+
+
+
+var OSName =""
+var ip_addr = "";
+    window.onload = function () {
+    /*
+       var ip_address = ''
+            $.ajax({
+                type: 'GET',
+                url: 'https://api.ipify.org?format=json',
+                success: function(data) {
+                   ip_address = data.ip
+                   console.log("ip>>>>",ip_address )
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/firewallscan?ip='+ ip_address,
+                success: function(data) {
+                 console.log("data",data)
+                 alert('open ports on ip: '+ip_address+'--are: '+data)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+*/
+
+    getOS();
+    showLoadingDots();
+    var role = "runscan";
+    console.log("role",role)
+    if(role === 'radmin' || role === 'admin'){
+        $('#onetimelogin').show();
+        $('#downloadcustdata').show();
+    }else{
+        $('#onetimelogin').hide();
+        $('#downloadcustdata').hide();
+    }
+    }
+
+    function startverification(){
+        if($("#webrb").is(":checked")){
+           location.href = "/whlite/simulation.html"
+        }else if($("#linuxsderb").is(":checked")){
+          console.log("linux radio button is checked")
+            $(".loading").css("display","block");
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/getSdeName?os='+OSName,
+                success: function(data) {
+                   var exedata = data;
+                   downloadURI('/whlite/downloadexecutable?os=' +OSName,exedata);
+                   $(".loading").css("display","none");
+                   setTimeout(sdeAlert, 8000)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+            setTimeout(sdeStarted, 2000);
+        }else if($("#macossderb").is(":checked")){
+          console.log("linux radio button is checked")
+            $(".loading").css("display","block");
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/getSdeName?os='+OSName,
+                success: function(data) {
+                   var exedata = data;
+                   downloadURI('/whlite/downloadexecutable?os=' +OSName ,exedata);
+                   $(".loading").css("display","none");
+                   setTimeout(sdeAlert, 8000)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+            setTimeout(sdeStarted, 2000);
+        }else if($("#winsderb").is(":checked")){
+            console.log("enetredddddd")
+            $(".loading").css("display","block");
+            $.ajax({
+                type: 'GET',
+                url: '/whlite/getSdeName?os='+OSName,
+                success: function(data) {
+                   var exedata = data;
+                   console.log("exedata",exedata)
+                  downloadURI('/whlite/downloadexecutable?os=' +OSName,exedata)
+                   $(".loading").css("display","none");
+                   setTimeout(sdeAlert, 8000)
+                },
+                error: function() {
+                    console.log("error")
+                }
+            });
+            setTimeout(sdeStarted, 2000);
+        }else{
+        }
+    }
+var timesRun = 0;
+function sdeStarted(){
+var timer = setInterval(function (){
+        $.ajax({
+            type: 'GET',
+            url: '/whlite/sde',
+            success: function(data) {
+                if (data === "Yes"){
+                    console.log("data>>>>",data)
+                    clearInterval(timer);
+                    location.href = "/whlite/simulationsde.html";
+                }
+                else{
+                        timesRun += 1;
+                        if(timesRun === 600){
+                            clearInterval(timer);
+                            $(".sdealert").css("display","block");
+                            $(".changealertText").text('The waiting time for user response is over. Please select attack and start verification again.');
+                        }
+                }
+            },
+            error: function() {
+                console.log("error>>>>")
+            }
+        });
+     },3000)
+}
+
+function sdeAlert(){
+    $(".sdealert").css("display","block");
+    $(".sdealert").fadeOut(7000);
+    $(".changealertText").text('Please click on downloaded executable to proceed with the verification');
+}
+
+
+
+function downloadURI(uri, name) 
+{
+    console.log("uri",uri)
+    console.log("name",name)
+    var link = document.createElement("a");
+    // If you don't know the name or want to use
+    // the webserver default set name = ''
+    link.setAttribute('download', name);
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+
+function getOS() {
+    OSName="Unknown OS";
+    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+    console.log('Your OS: '+OSName);
+     if(OSName === "Windows"){
+        document.getElementById("linuxsderb").disabled = true;
+        document.getElementById("macossderb").disabled = true;
+     }else if(OSName === "Linux" || OSName === "UNIX"){
+        document.getElementById("winsderb").disabled = true;
+        document.getElementById("macossderb").disabled = true;
+     }else{
+        document.getElementById("winsderb").disabled = true;
+        document.getElementById("linuxsderb").disabled = true;
+     }
+}
+
+var showLoadingDots = function() {
+    var showDots = setInterval(function(){
+    //look for the element with id=loadingDots
+    //if not found clear the interval
+    if ($("#loadingDots").length>0) {
+        var dots = '...',i=1;
+        if ($("#loadingDots").html().length==0 || ($("#loadingDots").html().length == dots.length)){
+            $("#loadingDots").html('');
+            var i = 1;
+        } else {
+            i++;
+        }
+        $("#loadingDots").html($("#loadingDots").html()+".");
+        } else {
+           //clear the interval, if element not found
+           clearInterval(showDots);
+        }
+    },400);
+}
+</script>
+
+
+<style>
+.main-box {
+  background: #E3E9F9;
+}
+.breadcrumb > li a {
+  color: #000000;
+}
+.breadcrumb > .active{
+  color: #000000;
+}
+/*.buttons{
+    padding-left: 30px;
+    background-color: red;
+}*/
+.buttonStyling{
+    color:#f5f5f5;
+    margin:10px;
+}
+#buttons :first-child {
+    float: none;
+}
+#buttons :nth-child(2) {
+    float: none
+}
+#buttons {
+    text-align: center;
+}
+.sdealert{
+    padding: 5px;
+    display: none;
+}
+.sdealertText{
+    text-align: center;
+    color: red;
+}
+.otlogin{
+    background-color: #03a9f4 !important;
+}
+.otlogin:hover{
+    background-color: #0022ff !important;
+}
+.radioFont{
+    font-size: 15px;
+}
+.loading{
+    text-align: center;
+    display:none;
+}
+.animation{
+     font-size:16px;
+     color:black;
+}
+</style>
+
+					<footer id="footer-bar" class="row">
+						<p id="footer-copyright" class="col-xs-12">
+							Powered by WhiteHAX
+						</p>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- global scripts -->
+
+<!--	<script src="/static/whlite/js/demo-skin-changer.js"></script>-->
+ <!-- only for demo -->
+
+<!--	<script src="/static/whlite/js/demo.js"></script>--> 
+	<!-- only for demo -->
+
+	<!-- theme scripts -->
+<script src="js/scripts.js"></script>
+<script src="js/pace.min.js"></script>
+
+<script>
+	$(document).ready( function(){
+		$.get('/whlite/getUserPrivileges/',function () {
+		})
+		.fail(function() {
+				console.log("getUserPrivileges error");
+			})
+		.done(function(data) {
+			console.log('getUserPrivileges: ' +data);
+			if (data != '')
+			{
+
+				var values = data.split('$');
+				var user = document.getElementById('uname');
+				user.innerHTML= '<i class="fa fa-user"></i> ' + values[0] + ' <b class="caret"></b>';
+
+				var value1 = parseInt(values[2]); 			//policy
+				var value2 = parseInt(values[3]); 			//scan
+				var value3 = parseInt(values[4]); 			// sch scan
+				var value4 = parseInt(values[5]); 			// report
+				var value5 = parseInt(values[6]); 			// infra
+				var value6 = parseInt(values[7]); 			// monitor
+				var value7 = parseInt(values[8]); 			// system
+
+				if ((value1&2) == 0)		// policy
+				{
+					$('#addProf').attr('disabled', true);
+					$('#saveprofbutton').attr('disabled', true);
+
+					butList = document.getElementsByName("profdelete");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				if ((value2&1) == 0)		// scan
+				{
+					$('#wiz').hide();
+					$("#repscan").hide();
+
+					$('#run_simulation').attr('disabled', true);
+
+					var butList = document.getElementsByName("repeat");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				if ((value3&1) == 0)		// sch scan
+				{
+					$("#sscan").hide();
+					$('#addSchedule').attr('disabled', true);
+
+					butList = document.getElementsByName("schedit");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+
+					butList = document.getElementsByName("schdelete");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				if ((value4&4) == 0)		// report
+				{
+					$('#report').hide();
+					butList = document.getElementsByName("pdfreport");
+					for (index=0; index < butList.length; index++)
+						butList[index].disabled = true;
+				}
+
+				//if ((value5&1) == 0)		// infra
+
+				if ((value6&1) == 0)		// monitor: irrelevant in scanner
+				{
+				}
+
+				if ((value7&1) == 0)		// system
+				{
+					$("#sysconf").hide();
+					$("#upd").hide();
+				}
+				else
+				{
+					$("#sysconf").show();
+					$("#upd").show();
+				}
+
+				var userid = 29;
+				var usercreatedby = 1;
+				var usertype = 2;
+				if (parseInt(userid) == 1)
+					$("#usrlist").show();
+			}
+		});
+
+	    /*
+	    var checkUpdates = function () {
+			$(document).ready(function(){
+				$.get('/whlite/chkSwUpdates/',function () {
+				})
+				.fail(function() {
+						console.log("error");
+					})
+				.done(function(data) {
+					if (data != 0)
+						$( "#avail" ).html( 'Available' );
+				})
+			});
+		}
+		checkUpdates();
+		*/
+
+	});
+
+	$.get('/whlite/chkCurScan/',function () {
+	})
+	.fail(function() {
+			console.log("error");
+		})
+	.done(function(data) {
+		console.log(' Scan in progress: ' + parseInt(data));
+		if (parseInt(data) != 0)
+		{
+			$( "#curScan" ).show();
+			$( "#simprog" ).show();
+			$( "#runsim" ).hide();
+		}
+		else
+		{
+			$( "#simprog" ).hide();
+			$( "#runsim" ).show();
+		}
+	});
+
+	function addWait()
+	{
+		$("*").css("cursor", "wait");
+	}
+
+	</script>
+<style>
+
+.center-brand-logo {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.theme-whbl #header-navbar {
+    background-color: #088af7; !important
+}
+
+.theme-whbl .navbar > .container .navbar-brand {
+    color: #bdbdbd;
+}
+
+.theme-whbl #sidebar-nav .nav > li > a {
+  color: #000; !important
+}
+
+.theme-whbl h1 {
+    color: #088af7; !important
+}
+
+.theme-whbl .nav-tabs > li > a  {
+    border-color: #ddd; !important
+
+}
+
+.theme-whbl .btn-primary {
+    background-color: #bdbdbd; !important
+    border-color: #bdbdbd; !important
+}
+
+.theme-whbl .btn-primary:hover {
+    background-color: #bdbdbd; !important
+    border-color: #bdbdbd; !important
+}
+
+.theme-whbl .btn-success {
+    background-color: #088af7;
+    border-color: #000000;
+}
+
+.theme-whbl .btn-success:hover{
+    background-color: #0022ff;
+    border-color: #483C3C;
+}
+
+.theme-whbl #header-navbar .nav > li > a:hover {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.green-bg {
+    background-color: #bdbdbd !important;
+    border-color: #bdbdbd; !important
+}
+li .active{
+	background-color: #6c757d;
+	color:#0052CC;
+}
+
+</style>
+
+</body>
+</html>
